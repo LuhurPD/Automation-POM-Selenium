@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login feature #1" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-03T03:22:38.942Z" hostname="DESKTOP-0ANCLQ9" time="11.868">
+  <properties/>
+  <testcase name="Valid login" classname="Login feature #1" time="11.868"/>
+  <system-out><![CDATA[
+@login
+Scenario: Valid login                          # src/test/resources/features/Login.feature:3
+  Given user is on login page                  # stepDefinitions.LoginSteps.userIsOnLoginPage()
+  When user enters valid username and password # stepDefinitions.LoginSteps.userEntersValidUsernameAndPassword()
+✅ Login sukses!
+  Then user should be redirected to homepage   # stepDefinitions.LoginSteps.userShouldBeRedirectedToHomepage()
+>> Closing browser
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.154 (resolved driver for Chrome 139)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\HP\.cache\selenium\chromedriver\win64\139.0.7258.154\chromedriver.exe
+Sep 03, 2025 10:22:41 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Sep 03, 2025 10:22:41 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.155. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
