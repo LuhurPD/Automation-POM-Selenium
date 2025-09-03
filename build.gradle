@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.25.0'
+
+    // Cucumber
+    testImplementation 'io.cucumber:cucumber-java:7.18.1'
+    testImplementation 'io.cucumber:cucumber-junit:7.18.1'
+
+    // Cucumber Reporting
+    testImplementation 'net.masterthought:cucumber-reporting:5.7.8'
+
+    // JUnit
+    testImplementation 'junit:junit:4.13.2'
+
+    // Web Driver
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+
+    // SLF4J
+    testImplementation 'org.slf4j:slf4j-simple:2.0.13'
+
+}
+
+test {
+    useJUnitPlatform()
+    useJUnit()
+    include '**/TestRunner.class'
+}
