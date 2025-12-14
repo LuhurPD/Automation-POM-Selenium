@@ -8,4 +8,5 @@ Feature: Dashboard
   Scenario: Valid login
     Given user on Landing page Kategori akulaku
     #When user on Landing page Kategori
+    And User Input key "vaksin"
 
