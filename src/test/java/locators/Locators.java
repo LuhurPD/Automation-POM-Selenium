@@ -6,4 +6,10 @@ public interface Locators {
     By PASSWORD_FIELD = By.id("password");
     By LOGIN_BUTTON   = By.cssSelector("button[type='submit']");
     By FLASH_MESSAGE  = By.id("flash");
+
+    By LABLE_BERANDA =By.xpath("//a[normalize-space()='Beranda']");
+
+    By Img_banner =By.xpath("(//img[@alt='Slide 3'])[1]");
+
+
 }

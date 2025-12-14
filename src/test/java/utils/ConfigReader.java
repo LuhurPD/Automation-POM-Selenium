@@ -3,7 +3,6 @@ package utils;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 public class ConfigReader {
     private static final Properties properties = new Properties();
 
@@ -33,6 +32,6 @@ public class ConfigReader {
     }
 
     public static String getBaseUrl() {
-        return properties.getProperty("baseUrl", "https://the-internet.herokuapp.com");
+        return properties.getProperty("baseUrl", "https://www.akulakufinance.co.id/");
     }
 }

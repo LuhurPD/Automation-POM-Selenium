@@ -24,4 +24,6 @@ public class LoginPage implements Locators {
     public String getFlashMessage() {
         return driver.findElement(FLASH_MESSAGE).getText();
     }
+
+
 }
