@@ -1,7 +1,17 @@
 package pageObjects;
 import locators.Locators;
+import org.jspecify.annotations.Nullable;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+//import org.junit.testng.Assert;
+
+
+
 
 public class DashboardAkulakuPage implements Locators {
 
@@ -18,10 +28,33 @@ public class DashboardAkulakuPage implements Locators {
     public void clickHome(){
         driver.findElement(LABLE_BERANDA).click();
     }
-    public void validastebanner(){
 
-        boolean isBannerDisplayed  =driver.findElement(Img_banner).isDisplayed();
-        Assert.assertTrue(isBannerDisplayed, "Banner is NOT displayed");
+    public void validastebanner() {
+        assertTrue(
+                driver.findElement(Img_banner).isDisplayed(),
+                "Banner is NOT visible"
+        );
+
+
     }
+    public void  thumbnailsVideo() {
+
+        driver.findElement(Video_1).isDisplayed();
+
+        List<WebElement> youtubeFrames =
+                driver.findElements(Video_1);
+
+        int expectedCount = 5;
+        int actualCount = youtubeFrames.size();
+
+        Assert.assertEquals(
+                String.valueOf(String.valueOf(youtubeFrames.size())),
+                5,
+                "Thumbnail YouTube tidak berjumlah 5"
+        );
+
+    }
+
+
 }
 

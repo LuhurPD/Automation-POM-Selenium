@@ -4,8 +4,8 @@ Feature: Dashboard
     Given user on Landing page akulaku
     When user click home
 
-  @Dashboard1
+  @Dashboard
   Scenario: Valid login
-    Given user on Landing page akulaku
-    When user click home
+    Given user on Landing page Kategori akulaku
+    #When user on Landing page Kategori
 

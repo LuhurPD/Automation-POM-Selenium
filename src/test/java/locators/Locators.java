@@ -9,7 +9,9 @@ public interface Locators {
 
     By LABLE_BERANDA =By.xpath("//a[normalize-space()='Beranda']");
 
-    By Img_banner =By.xpath("(//img[@alt='Slide 3'])[1]");
+    By Img_banner =By.xpath("(//img[@alt='Logo.png'])[1]");
+
+    By Video_1 =By.xpath("//iframe[contains(@src,'youtube.com')[1]]");
 
 
 }

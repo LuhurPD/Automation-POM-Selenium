@@ -21,9 +21,30 @@ public class DashboardAkulaku {
 
     }
 
+        @Given("user on Landing page Kategori akulaku")
+        public void userOnLandingPagekategoriAkulaku() {
+
+
+            driver = DriverFactory.getDriver(); // ✅ ambil dari DriverFactory
+            driver.get(ConfigReader.getBaseUrlKategori() + "/login");
+            DashboardAkulakuPage  = new DashboardAkulakuPage(driver);
+
+        }
+
+
+
     @When("user click home")
     public void clickHome() {
         //DashboardAkulakuPage.clickHome();
         DashboardAkulakuPage.validastebanner();
+       // DashboardAkulakuPage.validatepage();
+
+
+    }
+    @When("user on Landing page Kategori")
+    public void laningkategory() {
+DashboardAkulakuPage.thumbnailsVideo();
+
+
     }
 }

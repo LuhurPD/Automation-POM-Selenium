@@ -34,4 +34,8 @@ public class ConfigReader {
     public static String getBaseUrl() {
         return properties.getProperty("baseUrl", "https://www.akulakufinance.co.id/");
     }
+
+    public static String getBaseUrlKategori() {
+        return properties.getProperty("baseUrl", "https://www.akulakufinance.co.id/kegiatan");
+    }
 }
